@@ -2,6 +2,6 @@
 
 set -eo pipefail
 
-pip install telethon
+pip3 install telethon
 
 /usr/libexec/s2i/assemble
