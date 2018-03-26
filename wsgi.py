@@ -1,10 +1,11 @@
 import os
 from telethon import TelegramClient
 from flask import Flask
+from urlparse import parse_qs
 application = Flask(__name__)
 
 @application.route("/")
-def hello():
+def hello(environ, start_response):
     api_id = os.environ['apiidWebHookSecretKey']
     api_hash = os.environ['apihashWebHookSecretKey']
     botname = os.environ['botnameWebHookSecretKey']
