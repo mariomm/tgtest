@@ -4,7 +4,7 @@ from flask import Flask
 application = Flask(__name__)
 
 @application.route("/")
-def hello(environ, start_response):
+def hello():
     api_id = os.environ['apiidWebHookSecretKey']
     api_hash = os.environ['apihashWebHookSecretKey']
     botname = os.environ['botnameWebHookSecretKey']
