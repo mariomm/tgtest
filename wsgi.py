@@ -1,7 +1,7 @@
 import os
 from telethon import TelegramClient
 from flask import Flask
-from urlparse import parse_qs
+from cgi import parse_qs
 application = Flask(__name__)
 
 @application.route("/")
