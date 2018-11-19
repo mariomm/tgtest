@@ -15,7 +15,7 @@ def hello():
     paramb = request.args.get('paramb')
     client = TelegramClient('session_name', api_id, api_hash)
     client.start()   
-    client.send_message('@' + botname, typ + parama + paramb)
+    client.send_message('@' + botname, typ)
 
     return "Hello!"
     
