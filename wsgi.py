@@ -10,9 +10,7 @@ def hello():
     api_id = os.environ['apiidWebHookSecretKey']
     api_hash = os.environ['apihashWebHookSecretKey']
     botname = os.environ['botnameWebHookSecretKey']
-    typ = request.args.get('type')
-    #parama = request.args.get('parama')
-    #paramb = request.args.get('paramb')
+    typ = request.args.get('type')   
     client = TelegramClient('session_name', api_id, api_hash)
     client.start()   
     client.send_message('@' + botname, typ)
