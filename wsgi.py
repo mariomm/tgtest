@@ -16,12 +16,12 @@ def hello():
     client = TelegramClient('session_name', api_id, api_hash)
     client.start()
     client.send_message('@' + botname, typ)
-    time.sleep( 5 )
+    time.sleep( 2 )
     for message in client.iter_messages('@' + botname, limit=1):
       print(message.message)
-
+      mmessage = message.message
     client.disconnect()
-    return "Hello!"
+    return mmessage
 
 if __name__ == "__main__":
   application.run()
