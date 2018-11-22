@@ -1,9 +1,9 @@
 # http://url.com?type=Diesel
 
 import os
-import time
+#import time
 from telethon import TelegramClient, sync
-from telethon import utils
+#from telethon import utils
 from flask import Flask, request
 application = Flask(__name__)
 
@@ -16,12 +16,13 @@ def hello():
     client = TelegramClient('session_name', api_id, api_hash)
     client.start()
     client.send_message('@' + botname, typ)
-    time.sleep( 2 )
-    for message in client.iter_messages('@' + botname, limit=1):
-      print(message.message)
-      mmessage = message.message
+#    time.sleep( 2 )
+#    for message in client.iter_messages('@' + botname, limit=1):
+#      print(message.message)
+#      mmessage = message.message
     client.disconnect()
-    return mmessage
+#    return mmessage
+    return "ok"
 
 if __name__ == "__main__":
   application.run()
